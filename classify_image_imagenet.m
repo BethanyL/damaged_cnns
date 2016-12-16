@@ -6,4 +6,5 @@ new_batch = load(batch_name);
 % run the CNN
 res = vl_simplenn(net, new_batch.batch);
 
+% output class score for each image and each class 
 scores = squeeze(res(end).x)' ;

@@ -1,4 +1,6 @@
 function save_batch(file_list, filename, net_meta)
+% given list image filenames, load each image, preprocess it, and stack them all together.
+% save batch of images as .mat file
 
 number_images = length(file_list);
 batch = single(zeros(224, 224, 3, number_images));

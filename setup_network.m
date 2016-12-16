@@ -6,7 +6,7 @@ addpath(fullfile(root, 'matlab', 'mex')) ;
 addpath(fullfile(root, 'matlab', 'simplenn')) ;
 addpath(fullfile(root, 'matlab', 'xtest')) ;
 
-% load the pre-trained CNN and dataset (already evened out) 
+% load the pre-trained CNN 
 if face_flag
     net = lib.face_feats.convNet(net_file_name);
     net.net.layers = net.net.layers(1:end-2);

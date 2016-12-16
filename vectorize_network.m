@@ -1,4 +1,6 @@
 function vector = vectorize_network(network_matrices)
+% input is set of matrices of weights
+% output them all flattened into one vector 
 
 sizes = zeros(length(network_matrices), 1);
 for j = 1:length(sizes)

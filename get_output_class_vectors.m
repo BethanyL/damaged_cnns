@@ -1,7 +1,6 @@
-% returns final output values for every class by image.
-% output score predicted_vectors, which is then givent to get_predicted_labels
 function scores = get_output_class_vectors(net_to_damage, damaged_matrices, conv_layers, batch_list, face_flag)
-% here, net_to_damage should be of class convNet
+% returns final output values for every class by image.
+% output score predicted_vectors, which is then given to get_predicted_labels
 
 for j = 1:length(conv_layers)
     if face_flag

@@ -1,7 +1,31 @@
-% helper function for filter, inside damage
 function [matrices_as_vector, damaged_number] = filter_vector_in(matrices_as_vector, ...
     percentile_window, damage_amt, net_size)
-    
+%
+% called by filter_network to damage weights in increasing order of magnitude
+%
+% INPUTS:
+% matrices_as_vector
+%       vector of weights to damage
+% 
+% percentile_window
+%       scalar in [0,50]: filter from median + and - the percentile window size, 
+%       so the window is actually 2*percentile_window in size.
+%
+% damage_amt
+%       scalar, set the damaged weights to damage_amt. For now, we just use 0 here 
+%       (blockage)
+%
+% net_size
+%       scalar, number of weights (not including any eliminated by sparsification)
+%
+% OUTPUTS: 
+% matrices_as_vector
+%       same size as input matrices_as_vector, but weights have been damaged
+%
+% damaged_number
+%       scalar, number of weights damaged 
+%
+
 vec_size = length(matrices_as_vector);
 if vec_size > net_size
     % means that we already set some thresholded section to 0. Don't want to count those zeros

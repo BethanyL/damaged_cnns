@@ -1,5 +1,6 @@
 function set_base_params_faces()
 
+% change some of the base parameters chosen for ImageNet to work for VGG-face network 
 load('base_params.mat')
 
 net_file_name = 'vgg_face';

@@ -1,6 +1,8 @@
 function [weights_to_damage, num_damaged] = damagefn(weights_to_damage, pie_chart, high_weight, coeff, sigma)
-
+% this function damages the weights randomly
+% the damage is split over four types: 
 % Red (blockage), Orange (Reflection), Yellow (Filtering) and Green (Transmision)
+
 num_weights = length(weights_to_damage);
 num_types = nnz(pie_chart);
 if num_types > 1

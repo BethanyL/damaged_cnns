@@ -1,5 +1,5 @@
-% returns labels predicted by the network
 function labels = get_predicted_labels(predicted_vectors, label_to_truth, face_flag)
+% returns labels predicted by the network
 
 if face_flag
     % predicted_vectors is num_images x num_features, batch-by-batch

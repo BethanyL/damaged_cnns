@@ -1,7 +1,7 @@
-% reshapes damaged vector into original network matrices
 function matrices = reshape_matrices(matrix_as_vector, matrix_shapes)
+% reshapes damaged vector into original network matrices
 
-% vector_lengths is a vector of 
+% vector_lengths is a vector of how many elements belong to each matrix 
 vector_lengths = get_vector_lengths(matrix_shapes);
 matrices = cell(size(vector_lengths, 1), 1); 
 

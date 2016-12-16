@@ -8,6 +8,7 @@ for j = 1:1000
     image_list(:,j) = indClass(randperm(length(indClass), 10));
 end
 
+% each batch is one random example from each class 
 for k = 1:10
     batch = image_list(k,:);
     filename = sprintf('batch%d.mat',k);

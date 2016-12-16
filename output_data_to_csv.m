@@ -1,5 +1,5 @@
-% handles printing everything to .csv file. 
 function output_data_to_csv(file_name, damage_size, num_damaged, trial_number, actual_labels, predicted_labels, class_scores, face_flag)
+% handles printing everything to .csv file (full details, row for each input image, damage amount pair)
 
 fd = fopen(file_name, 'a'); 
 if face_flag

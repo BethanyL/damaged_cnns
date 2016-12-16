@@ -1,6 +1,8 @@
+% pick 500 random people and 5 images of each of them 
+% each batch has one of the 500 people
+
 faces = load('../data/faceData/FacesInTheWild');
 % faces.lexicon: list of people, 1 x 14808 cell, i.e. 'Scott Ritter'
-
 % faces.metaData: list of images, 1 x 30281 cell, i.e. ...
 % faces.metaData{1}.fileName = % '2002/09/28/img_828.0.ppm' 
 % and faces.metaData{1}.clusterNum = 1

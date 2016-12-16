@@ -1,6 +1,30 @@
-% helper function for filter, outside damage
 function [matrices_as_vector, damaged_number] = filter_vector_out(matrices_as_vector, ...
-    percentile_window, damage_amt, net_size)
+    percentile_window, damage_amt, net_size)   
+%
+% called by filter_network to damage weights in decreasing order of magnitude
+%
+% INPUTS:
+% matrices_as_vector
+%       vector of weights to damage
+% 
+% percentile_window
+%       scalar in [0,50]: filter from both left and right ends of histogram, 
+%       so the window is actually 2*percentile_window in size.
+%
+% damage_amt
+%       scalar, set the damaged weights to damage_amt. For now, we just use 0 here 
+%       (blockage)
+%
+% net_size
+%       scalar, number of weights (not including any eliminated by sparsification)
+%
+% OUTPUTS: 
+% matrices_as_vector
+%       same size as input matrices_as_vector, but weights have been damaged
+%
+% damaged_number
+%       scalar, number of weights damaged 
+%
     
 vec_size = length(matrices_as_vector);
 if vec_size > net_size
