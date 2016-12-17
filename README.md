@@ -1,4 +1,4 @@
-This is the code used in the paper "Modeling cognitive deficits following neurodegenerative diseases and traumatic brain
+This is the code used in [the paper](https://arxiv.org/abs/1612.04423) "Modeling cognitive deficits following neurodegenerative diseases and traumatic brain
 injuries with deep convolutional neural networks" by Bethany Lusch, Jake Weholt, Pedro D. Maia, and J. Nathan Kutz.
 
 The code is written by Bethany Lusch and Jake Weholt.
